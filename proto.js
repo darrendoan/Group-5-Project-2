@@ -1,12 +1,11 @@
 /* eslint-disable no-undef */
-
 /* This is a prototype script for Passwordless Auth, please do not under any circumstances use this file in any production capacity */
 const express = require('express');
 // Auth is required to initialise the connection to Auth0, requiresAuth is needed to add a hook to pages that require login
 const { auth, requiresAuth } = require('express-openid-connect');
-const config = require('./config/auth');
+const config = require('./config/auth.js');
 
-const PORT = 3001;
+const PORT = process.env.DEV_PORT;
 const app = express();
 
 // Initialise Auth0 integration and load config
