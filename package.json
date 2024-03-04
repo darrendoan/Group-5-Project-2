@@ -1,0 +1,22 @@
+{
+    "name": "spawnpoint",
+    "version": "1.0.0",
+    "description": "Spawnpoint is a collaborative platform that allows gamers to discover, host, create, and join gaming events such as tournaments, LAN parties, and online matches. Users can browse upcoming events, create their own events, and connect with fellow gamers.",
+    "main": "index.js",
+    "scripts": {
+        "seed": "node ./seeds/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.3",
+        "mysql2": "^3.9.2",
+        "sequelize": "^6.37.1",
+        "dotenv": "^16.4.5",
+        "handlebars": "^4.7.8"
+    },
+    "devDependencies": {
+        "eslint" : "^8.57.0"
+    }
+}
