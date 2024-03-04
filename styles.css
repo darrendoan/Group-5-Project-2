@@ -22,7 +22,9 @@ header {
 #createEvent {
 padding: 10px;
 display: flex;
-background: url(banner.jpg);
+background: url(./images/banner.jpg);
+background-position: center;
+background-size: cover;
 min-height: 100vh;
 padding: 0 10px;
 align-items: center;
@@ -350,4 +352,8 @@ article .calendar-current-date {
 
 .calendar-dates li:not(.active):hover::before {
   background: #e4e1e1;
+}
+
+.exit-btn {
+  background: linear-gradient(to right, #ff105f,#ffad06);
 }

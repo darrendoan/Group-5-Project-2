@@ -7,7 +7,7 @@
 .hero {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./images/banner.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -102,8 +102,8 @@
 span {
     color: #777;
     font-size: 12px;
-    bottom: 68px;
-    position: absolute;
+    /* bottom: 68px;
+    position: absolute; */
 }
 
 #signIn {
@@ -113,3 +113,21 @@ span {
 #register {
     left: 450px;
 }
+
+.exit-btn {
+width: 85%;
+padding: 10px 30px;
+cursor: pointer;
+display: block;
+margin: auto;
+background: linear-gradient(to right, #ff105f,#ffad06);
+border: 0;
+outline: none;
+border-radius: 30px;
+}
+
+hr.rounded {
+    border-top: 5px transparent;
+    border-radius: 5px;
+    padding: 3px;
+  }

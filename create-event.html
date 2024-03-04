@@ -27,10 +27,16 @@
           <input type="text" id="gameTitle" name="gameTitle" required>
           <div>
             <button class="createEventBtn" type="submit">Create Event</button>
+            <button class="exit-btn" onclick="exit()">Exit</button>
             </div>
           
         </form>
       </section>
       <script src="script.js"></script>
+      <script>
+        function exit() {
+            window.location.href = "index.html";
+        }
+      </script>
  </body>
  </html>
