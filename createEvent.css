@@ -1,0 +1,9 @@
+#createEvent {
+    padding: 10px;
+    display: flex;
+    background: #714b6b;
+    min-height: 100vh;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    }
