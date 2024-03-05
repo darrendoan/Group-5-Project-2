@@ -148,12 +148,12 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 
 ## Contribution/Roles
 
-| Contributors                                       | Roles                | Task                                                                          |
-| -------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
-| [Darren Doan](https://github.com/darrendoan)             | Full Stack Developer | Created and Maintained Github Repository<br>                                  |
-| [Jean Piere ](https://github.com/)                        | Full Stack Developer | Database<br>                                                                  |
-| [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer | Database<br> Created and Completed README<br> Prepared Presentation Slideshow |
-| [Nathaniel Poulson](https://github.com/natpoulson) | Full Stack Developer | Project Manager/Developer                                                     |
+| Contributors                                       | Roles                     | Task                                                                          |
+| -------------------------------------------------- | ------------------------- | ----------------------------------------------------------------------------- |
+| [Darren Doan](https://github.com/darrendoan)       | Full Stack Developer      | Created and Maintained Github Repository<br>                                  |
+| [Jean Piere ](https://github.com/)                 | Project Manager/Developer | Database<br>                                                                  |
+| [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer      | Database<br> Created and Completed README<br> Prepared Presentation Slideshow |
+| [Nathaniel Poulson](https://github.com/natpoulson) | Full Stack Developer      | Project Manager/Developer                                                     |
 
 _The roles mentioned above are rough representation of individual member's tasks. Thoroughout the project, we all collaborated and contributed to each other's coding._
 
