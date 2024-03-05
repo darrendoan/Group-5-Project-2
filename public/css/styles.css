@@ -22,7 +22,7 @@ header {
 #createEvent {
   padding: 10px;
   display: flex;
-  background: url(./images/banner.jpg);
+  background: url(../../assets/images/banner.jpg);
   background-position: center;
   background-size: cover;
   min-height: 100vh;
