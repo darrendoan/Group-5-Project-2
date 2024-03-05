@@ -1,6 +1,6 @@
 <h1 align ="center">Spawnpoint</h1>
 
-![HTML/CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-red) ![Node.js](https://img.shields.io/badge/Node.js-orange) ! ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![MySQL2@3.9.2](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender) ![eslint@8.57.0](https://img.shields.io/badge/eslint@8.57.0-babyblue)
+![HTML/CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-red) ![Node.js](https://img.shields.io/badge/Node.js-orange) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![MySQL2@3.9.2](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender) ![eslint@8.57.0](https://img.shields.io/badge/eslint@8.57.0-babyblue)
 
 <h2 align ="center">Spawnpoint</h2>
 
