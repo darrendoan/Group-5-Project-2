@@ -161,11 +161,11 @@ _The roles mentioned above are rough representation of individual member's tasks
 ## Installation Instruction
 
 - [Install nodejs and npm](https://nodejs.org/en/download)  
-  Node.js is for npm only. The project doesn't use the Node.js in any other way. It is a requirement to use Tailwind css.
+
 
 ## Licence
 
-This project is licensed under the [MIT License](https://github.com/Yukitoshi12345/The-University-of-Gaming/blob/main/LICENSE).
+
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 
