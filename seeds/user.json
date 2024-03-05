@@ -1,0 +1,16 @@
+[
+  {
+    "fName": "John",
+    "lName": "Doe",
+    "userName": "john_doe",
+    "phoneNumber": "123456789",
+    "email": "john.doe@example.com"
+  },
+  {
+    "fName": "Johnn",
+    "lName": "Doer",
+    "userName": "john_doer",
+    "phoneNumber": "1234567890",
+    "email": "john.doer@example.com"
+  }
+]
