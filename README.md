@@ -1,6 +1,6 @@
 <h1 align ="center">Spawnpoint</h1>
 
-![CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-yellow) ![Node.js](https://img.shields.io/badge/Node.js-orange) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-babyblue) ![Express-Session@1.18.0](https://img.shields.io/badge/Express_Session@1.18.0-lightgrey) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender)
+![CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-yellow) ![Node.js](https://img.shields.io/badge/Node.js-orange) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-babyblue) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender)
 
 <h2 align ="center">Spawnpoint</h2>
 
@@ -151,7 +151,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 
 | Contributors                                   | Roles                | Task                                                                          |
 | ---------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
-| [Daren](https://github.com/darrendoan)         | Full Stack Developer | Created and Maintained Github Repository<br>                                   |
+| [Daren](https://github.com/darrendoan)         | Full Stack Developer | Created and Maintained Github Repository<br>                                  |
 | [Jean](https://github.com/)                    | Full Stack Developer | Database<br>                                                                  |
 | [Muhamad Sahid](https://github.com/BrxwnSugxr) | Full Stack Developer | Database<br> Created and Completed README<br> Prepared Presentation Slideshow |
 | [Nat](https://github.com/natpoulson)           | Full Stack Developer | Project Manager/Developer                                                     |
