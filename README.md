@@ -23,13 +23,77 @@ Gaming Event Hub is a platform that allows gamers to discover, host, create, and
 ## User Story
 
 ```md
-
+AS A Gamer
+I WANT to be able to organise and schedule events
+SO THAT I can co-ordinate play sessions with many people
 ```
 
 ## Acceptance Criteria
 
 ```md
+GIVEN I am organising an event
 
+WHEN I click Register
+AND provide a valid email address
+THEN I should receive an email confirming my membership, containing a magic link
+
+WHEN I click Log in
+AND I have an account
+THEN I should receive an email with a magic link to sign in
+
+WHEN I click the magic link
+PROVIDED the link is not expired
+THEN I should be able to sign in
+ELSE I will receive a new link
+
+WHEN I click New Event
+THEN I should be presented with the options to specify a date, time, game, and notes
+
+WHEN I enter the name of a game
+THEN I should be presented with a list of suggestions for games to include OR presented with the option to add a game, if it is not listed
+
+WHEN I choose to add a game THEN I should be presented with options to set the game name, platforms, maximum number of players, type of game, and notes about the game
+
+WHEN I enter the date of the event
+THEN I should be able to create the event
+PROVIDED it starts at least 2 days after the current date
+
+WHEN I click Save
+THEN I should see my event appear on the calendar,
+with the name of the game, the number of people attending, the maximum capacity, the starting time and finishing time
+
+WHEN I click on the event as an organiser
+THEN I should see the full details of the event, including those who are interested in attending
+
+WHEN I click Manage Attendees THEN I should see a checkbox list of interested people, and checkboxes next to those who are already marked to attend
+
+WHEN I check on attendees and click save PROVIDED there are no more than the maximum capacity THEN I should see the updated list of attendees matching my selection
+
+WHEN I delete an Event
+THEN attendees should be notified that the event is cancelled
+
+GIVEN I am looking for an event to join
+
+WHEN I am not signed in
+THEN I will see a simplified view of upcoming events
+
+WHEN I am signed in
+THEN I will see a calendar view of all upcoming events
+AND a summary of the events I will be attending
+
+WHEN I view an event
+THEN I will have the option to express interest AND attach a note
+IF I am not signed in
+THEN I will be prompted to create an account
+
+WHEN I view an event I am attending
+THEN I will see who else is attending, and their notes
+
+WHEN I cancel my attendance
+THEN I should no longer be able to see myself in the attendance list, nor the notes of attendees
+
+WHEN I delete my account
+THEN I should be removed from all events
 ```
 
 ## Usage
@@ -77,7 +141,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 - Node.js
 - Express.js
 - mySQL2
-- Sequelize
+- Sequelize ORM
 - Dotenv
 - javascript
 - [Google Fonts](https://fonts.google.com/)
@@ -87,7 +151,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 
 | Contributors                                   | Roles                | Task                                                                          |
 | ---------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
-| [Daren](https://github.com/darrendoan)         | Full Stack Developer | Created and Maintained Github Repository<br>                                  |
+| [Daren](https://github.com/darrendoan)         | Full Stack Developer | Created and Maintained Github Repository<br>                                   |
 | [Jean](https://github.com/)                    | Full Stack Developer | Database<br>                                                                  |
 | [Muhamad Sahid](https://github.com/BrxwnSugxr) | Full Stack Developer | Database<br> Created and Completed README<br> Prepared Presentation Slideshow |
 | [Nat](https://github.com/natpoulson)           | Full Stack Developer | Project Manager/Developer                                                     |
