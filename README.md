@@ -135,15 +135,14 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 ## Technologies Used
 
 - HTML/CSS
-- Bootstrap
-- Handlebars.js
-- Express-Handlebars
+- Javascript
 - Node.js
 - Express.js
 - mySQL2
 - Sequelize ORM
+- Handlebars.js
 - Dotenv
-- javascript
+- eslint
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
 
