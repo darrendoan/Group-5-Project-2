@@ -152,7 +152,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 | Contributors                                       | Roles                | Task                                                                          |
 | -------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
 | [Darren Doan](https://github.com/darrendoan)             | Full Stack Developer | View<br>Created and Maintained Github Repository<br>                                  |
-| [Jean Piere ](https://github.com/)                        | Full Stack Developer | Database - Model<br>Controller<br>                                                                  |
+| [Jean Piere ](https://github.com/)                        | Snr Full Stack Developer | Database - Model<br>Controller<br>                                                                  |
 | [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer | Database - Model<br>View<br> Created and Completed README<br> Prepared Presentation Slideshow |
 | [Nathaniel Poulson](https://github.com/natpoulson) | Project Manager/Developer |     database architecture<br>  Auth0 and manage user sessions                                               |
 
