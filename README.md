@@ -161,10 +161,6 @@ _The roles mentioned above are rough representation of individual member's tasks
 
 - [Install nodejs and npm](https://nodejs.org/en/download)
 
-## Licence
-
-_The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
-
 ## Installation Instruction
 
 - [Install nodejs and npm](https://nodejs.org/en/download)
