@@ -1,0 +1,26 @@
+[
+  {
+    "status": 1,
+    "title": "First Event",
+    "descriptionEvent": "Description for the first event.",
+    "startDate": "",
+    "endDate": "",
+    "locationId": 1,
+    "timezone": "UTC+0",
+    "gameId": 1,
+    "platformId": 123,
+    "maxCapacity": 100
+  },
+  {
+    "status": 0,
+    "title": "Second Event",
+    "descriptionEvent": "Description for the second event.",
+    "startDate": "",
+    "endDate": "",
+    "locationId": 2,
+    "timezone": "UTC+1",
+    "gameId": 2,
+    "platformId": 456,
+    "maxCapacity": 150
+  }
+]
