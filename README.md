@@ -169,4 +169,4 @@ _The roles mentioned above are rough representation of individual member's tasks
 
 ## License
 
-This project is licensed under the [MIT License](hhttps://github.com/darrendoan/Group-5-Project-2/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/darrendoan/Group-5-Project-2/blob/main/LICENSE).
