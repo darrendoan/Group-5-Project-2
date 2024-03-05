@@ -120,7 +120,7 @@ THEN I should be removed from all events
 
 ## APIs Used
 
-- [example](https://.../)
+- [MailGun](https://documentation.mailgun.com/)
 
 ```md
 URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
