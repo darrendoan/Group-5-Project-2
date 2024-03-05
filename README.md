@@ -143,6 +143,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 - Handlebars.js
 - Dotenv
 - eslint
+- MailGun
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
 
