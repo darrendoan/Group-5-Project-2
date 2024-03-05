@@ -36,7 +36,7 @@ Gaming Event Hub is a platform that allows gamers to discover, host, create, and
 
 | Steps            | Details                                                                         |
 | ---------------- | ------------------------------------------------------------------------------- |
-| Live application | [The University of Gaming](https://github.com/darrendoan/Group-5-Project-2.git) |
+| Live application | [Spawnpoint](https://github.com/darrendoan/Group-5-Project-2.git) |
 | Clone this repo  | ` git clone https://github.com/darrendoan/Group-5-Project-2.git`                |
 | run on vs        | `cd ..`                                                                         |
 
