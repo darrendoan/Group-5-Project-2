@@ -34,11 +34,11 @@ Gaming Event Hub is a platform that allows gamers to discover, host, create, and
 
 ## Usage
 
-| Steps            | Details                                                                         |
-| ---------------- | ------------------------------------------------------------------------------- |
+| Steps            | Details                                                           |
+| ---------------- | ----------------------------------------------------------------- |
 | Live application | [Spawnpoint](https://github.com/darrendoan/Group-5-Project-2.git) |
-| Clone this repo  | ` git clone https://github.com/darrendoan/Group-5-Project-2.git`                |
-| run on vs        | `cd ..`                                                                         |
+| Clone this repo  | ` git clone https://github.com/darrendoan/Group-5-Project-2.git`  |
+| run on vs        | `cd ..`                                                           |
 
 ## Instruction
 
@@ -81,12 +81,12 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 
 ## Contribution/Roles
 
-| Contributors                                   | Roles | Task                                                                          |
-| ---------------------------------------------- | ----- | ----------------------------------------------------------------------------- |
-| [Daren](https://github.com/darrendoan)         |       | Created and Maintained Github Repository<br>                                  |
-| [Jean](https://github.com/)                    |       | Database<br>                                                                  |
-| [Muhamad Sahid](https://github.com/BrxwnSugxr) |       | Created and Completed README<br> Prepared Presentation Slideshow<br> Database |
-| [Nat](https://github.com/natpoulson)           |       |                                                                               |
+| Contributors                                   | Roles                | Task                                                                          |
+| ---------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
+| [Daren](https://github.com/darrendoan)         | Full Stack Developer | Created and Maintained Github Repository<br>                                  |
+| [Jean](https://github.com/)                    | Full Stack Developer | Database<br>                                                                  |
+| [Muhamad Sahid](https://github.com/BrxwnSugxr) | Full Stack Developer | Created and Completed README<br> Prepared Presentation Slideshow<br> Database |
+| [Nat](https://github.com/natpoulson)           | Full Stack Developer | Project Manager/Developer                                                     |
 
 _The roles mentioned above are rough representation of individual member's tasks. Thoroughout the project, we all collaborated and contributed to each other's coding._
 
@@ -94,10 +94,6 @@ _The roles mentioned above are rough representation of individual member's tasks
 
 - [Install nodejs and npm](https://nodejs.org/en/download)  
   Node.js is for npm only. The project doesn't use the Node.js in any other way. It is a requirement to use Tailwind css.
-- [Install Tailwind CSS](https://tailwindcss.com/docs/installation)  
-  Follow the instructions under Tailwind CLI
-- CORS: Access-Control-Allow-Origin. This extension is needed to be installed and turned on for the weekly game articles and game video. Please follow the instruction below for more information.  
-  [https://chromewebstore.google.com/detail/lhobafahddgcelffkeicbaginigeejlf](https://chromewebstore.google.com/detail/lhobafahddgcelffkeicbaginigeejlf)
 
 ## Licence
 
