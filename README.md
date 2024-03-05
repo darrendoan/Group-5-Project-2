@@ -160,7 +160,7 @@ _The roles mentioned above are rough representation of individual member's tasks
 ## Installation Instruction
 
 ```md
-- [npm Install](https://nodejs.org/en/download)
+- [npm Install]post img of packageson
 ```
 
 ## Installation Instruction
