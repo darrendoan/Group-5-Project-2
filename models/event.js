@@ -5,70 +5,97 @@ class Event extends Model {}
 
 Event.init(
   {
-    ID: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      comment: 'Unique identifier for the event',
     },
-    STATUS: {
+    status: {
       type: DataTypes.TINYINT,
-      allowNull: true, // Adjusted to match NULL in TINYINT
+      allowNull: true,
+      comment: 'Status of the event',
     },
-    TITLE: {
+    title: {
       type: DataTypes.STRING(30),
       allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Event title cannot be null.',
+        },
+        notEmpty: {
+          msg: 'Event title cannot be empty.',
+        },
+        len: {
+          args: [1, 30],
+          msg: 'Event title must be between 1 and 30 characters.',
+        },
+      },
+      comment: 'Title of the event',
     },
-    DESCRIPTION_EVENT: {
+    descriptionEvent: {
       type: DataTypes.STRING(255),
+      comment: 'Description of the event',
     },
-    START_DATE: {
+    startDate: {
       type: DataTypes.DATE,
-      allowNull: true, // Adjusted to match NULL in DATE
+      allowNull: true,
+      comment: 'Start date and time of the event',
     },
-    END_DATE: {
+    endDate: {
       type: DataTypes.DATE,
-      allowNull: true, // Adjusted to match NULL in DATE
+      allowNull: true,
+      comment: 'End date and time of the event',
     },
-    LOCATION_ID: {
+    locationId: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'name_location',
-        key: 'ID',
+        model: 'NameLocation',
+        key: 'id',
       },
+      comment: 'Foreign key referencing the location of the event',
     },
-    TIMEZONE: {
+    timezone: {
       type: DataTypes.STRING(30),
+      comment: 'Timezone of the event',
     },
-    GAME_ID: {
+    gameId: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'name_game',
-        key: 'ID',
+        model: 'NameGame',
+        key: 'id',
       },
+      comment: 'Foreign key referencing the game associated with the event',
     },
-    PLATFORM_ID: {
+    platformId: {
       type: DataTypes.INTEGER,
+      comment: 'Identifier for the event platform',
     },
-    MAX: {
+    maxCapacity: {
       type: DataTypes.INTEGER,
+      comment: 'Maximum capacity for the event',
     },
-    CREATED_AT: {
+    createdAt: {
       type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW, // Adjusted to match CURRENT_TIMESTAMP
+      defaultValue: DataTypes.NOW,
+      comment: 'Timestamp of when the event was created',
     },
-    MODIFIED_AT: {
+    updatedAt: {
       type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW, // Adjusted to match CURRENT_TIMESTAMP
-      onUpdate: DataTypes.NOW, // Added to match ON UPDATE CURRENT_TIMESTAMP
+      defaultValue: DataTypes.NOW,
+      onUpdate: DataTypes.NOW,
+      comment: 'Timestamp of when the event was last updated',
     },
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
+    timestamps: true, // Set to true for createdAt and updatedAt columns
     underscored: true,
-    modelName: 'event',
+    modelName: 'Event',
+    tableName: 'events', // Customize the table name if needed
+    paranoid: true, // Enable soft deletes
+    comment: 'Table storing information about events',
   }
 );
 

@@ -1,45 +1,102 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class NameGame extends Model {}
+class Event extends Model {}
 
-NameGame.init(
+Event.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-      comment: 'Unique identifier for the game',
+      comment: 'Unique identifier for the event',
     },
-    gameName: {
+    status: {
+      type: DataTypes.TINYINT,
+      allowNull: true,
+      comment: 'Status of the event',
+    },
+    title: {
       type: DataTypes.STRING(30),
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'Game name cannot be null.',
+          msg: 'Event title cannot be null.',
         },
         notEmpty: {
-          msg: 'Game name cannot be empty.',
+          msg: 'Event title cannot be empty.',
         },
         len: {
           args: [1, 30],
-          msg: 'Game name must be between 1 and 30 characters.',
+          msg: 'Event title must be between 1 and 30 characters.',
         },
       },
-      comment: 'Name of the game',
+      comment: 'Title of the event',
+    },
+    descriptionEvent: {
+      type: DataTypes.STRING(255),
+      comment: 'Description of the event',
+    },
+    startDate: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      comment: 'Start date and time of the event',
+    },
+    endDate: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      comment: 'End date and time of the event',
+    },
+    locationId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'NameLocation',
+        key: 'id',
+      },
+      comment: 'Foreign key referencing the location of the event',
+    },
+    timezone: {
+      type: DataTypes.STRING(30),
+      comment: 'Timezone of the event',
+    },
+    gameId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'NameGame',
+        key: 'id',
+      },
+      comment: 'Foreign key referencing the game associated with the event',
+    },
+    platformId: {
+      type: DataTypes.INTEGER,
+      comment: 'Identifier for the event platform',
+    },
+    maxCapacity: {
+      type: DataTypes.INTEGER,
+      comment: 'Maximum capacity for the event',
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      comment: 'Timestamp of when the event was created',
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      onUpdate: DataTypes.NOW,
+      comment: 'Timestamp of when the event was last updated',
     },
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
+    timestamps: true, // Set to true for createdAt and updatedAt columns
     underscored: true,
-    modelName: 'NameGame',
-    tableName: 'name_games', // Customize the table name if needed
-    paranoid: true, // Enable soft deletes see if this is industry standard
-    comment: 'Table storing information about games',
+    modelName: 'Event',
+    tableName: 'events', // Customize the table name if needed
+    paranoid: true, // Enable soft deletes
+    comment: 'Table storing information about events',
   }
 );
 
-module.exports = NameGame;
+module.exports = Event;
