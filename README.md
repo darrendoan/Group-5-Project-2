@@ -172,3 +172,4 @@ _The roles mentioned above are rough representation of individual member's tasks
 - [Install MySQL](https://dev.mysql.com/downloads/mysql/)
 
 ## License
+This project is licensed under the [MIT License](https://github.com/).
