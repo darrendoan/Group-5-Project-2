@@ -159,7 +159,9 @@ _The roles mentioned above are rough representation of individual member's tasks
 
 ## Installation Instruction
 
-- [Install nodejs and npm](https://nodejs.org/en/download)
+```md
+- [npm Install](https://nodejs.org/en/download)
+```
 
 ## Installation Instruction
 
