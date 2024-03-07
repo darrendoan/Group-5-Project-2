@@ -120,10 +120,10 @@ THEN I should be removed from all events
 
 ## APIs Used
 
-- [example](https://.../)
+- [MailGun](https://documentation.mailgun.com/)
 
 ```md
-URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
+URL: https://documentation.mailgun.com/
 ```
 
 - [example](https://.../)
@@ -143,6 +143,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 - Handlebars.js
 - Dotenv
 - eslint
+- MailGun
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
 
@@ -150,10 +151,10 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 
 | Contributors                                       | Roles                | Task                                                                          |
 | -------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
-| [Darren Doan](https://github.com/darrendoan)             | Full Stack Developer | Created and Maintained Github Repository<br>                                  |
-| [Jean Piere ](https://github.com/)                        | Full Stack Developer | Project Manager/Developer<br>                                                                  |
-| [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer | Database<br> Created and Completed README<br> Prepared Presentation Slideshow |
-| [Nathaniel Poulson](https://github.com/natpoulson) | Full Stack Developer | Project Manager/Developer                                                     |
+| [Darren Doan](https://github.com/darrendoan)             | Full Stack Developer | View<br>Created and Maintained Github Repository<br>                                  |
+| [Jean Piere ](https://github.com/)                        | Snr Full Stack Developer | Database - Model<br>Controller<br>                                                                  |
+| [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer | Database - Model<br>View<br> Created and Completed README<br> Prepared Presentation Slideshow |
+| [Nathaniel Poulson](https://github.com/natpoulson) | Project Manager/Developer |     database architecture<br>  Auth0 and manage user sessions                                               |
 
 _The roles mentioned above are rough representation of individual member's tasks. Thoroughout the project, we all collaborated and contributed to each other's coding._
 

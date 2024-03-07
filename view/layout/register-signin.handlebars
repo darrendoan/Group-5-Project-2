@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register or Sign-in!</title>
-    <link rel="stylesheet" href="./public/css/register-signin.css" />
+    <link rel="stylesheet" href="../public/css/register-signin.css" />
   </head>
   <body>
+    <nav>{{ header }}</nav>
     <div class="hero">
       <div class="form-box">
         <div class="button-box">
@@ -19,9 +20,9 @@
           </button>
         </div>
         <div class="social-icons">
-          <img src="./assets/images/fb.png" />
-          <img src="./assets/images/tw.png" />
-          <img src="./assets/images/gp.png" />
+          <img src="../assets/images/fb.png" />
+          <img src="../assets/images/tw.png" />
+          <img src="../assets/images/gp.png" />
         </div>
         <form id="signIn" class="input-group">
           <input
@@ -90,8 +91,9 @@
       }
 
       function exit() {
-        window.location.href = 'index.html';
+        window.location.href = './layout/index.html';
       }
     </script>
+    {{footer}}
   </body>
 </html>
