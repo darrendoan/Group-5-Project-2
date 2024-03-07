@@ -12,9 +12,13 @@ Event.init(
       autoIncrement: true,
       comment: 'Unique identifier for the event',
     },
-    status: {
-      type: DataTypes.TINYINT,
-      allowNull: true,
+    status_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'status',
+        key: 'id',
+      },
       comment: 'Status of the event',
     },
     title: {
@@ -34,55 +38,76 @@ Event.init(
       },
       comment: 'Title of the event',
     },
-    descriptionEvent: {
+    description: {
       type: DataTypes.STRING(255),
+      allowNull: false,
       comment: 'Description of the event',
     },
-    startDate: {
+    start_date: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
       comment: 'Start date and time of the event',
     },
-    endDate: {
+    end_date: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
       comment: 'End date and time of the event',
     },
-    locationId: {
+    timezone_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
-        model: 'NameLocation',
+        model: 'timezone',
         key: 'id',
       },
-      comment: 'Foreign key referencing the location of the event',
-    },
-    timezone: {
-      type: DataTypes.STRING(30),
       comment: 'Timezone of the event',
     },
-    gameId: {
+    game_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
-        model: 'NameGame',
+        model: 'game',
         key: 'id',
       },
       comment: 'Foreign key referencing the game associated with the event',
     },
-    platformId: {
+    platform_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'platform',
+        key: 'id',
+      },
       comment: 'Identifier for the event platform',
     },
-    maxCapacity: {
+    min_player: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       comment: 'Maximum capacity for the event',
     },
-    createdAt: {
+    max_player: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      comment: 'Maximum capacity for the event',
+    },
+    organizer_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+      comment: 'Identifier for the event platform',
+    },
+    created_at: {
       type: DataTypes.DATE,
+      allowNull: false,
       defaultValue: DataTypes.NOW,
       comment: 'Timestamp of when the event was created',
     },
-    updatedAt: {
+    updated_at: {
       type: DataTypes.DATE,
+      allowNull: false,
       defaultValue: DataTypes.NOW,
       onUpdate: DataTypes.NOW,
       comment: 'Timestamp of when the event was last updated',
@@ -90,10 +115,10 @@ Event.init(
   },
   {
     sequelize,
-    timestamps: true, // Set to true for createdAt and updatedAt columns
+    timestamps: false, // Set to true for created_at and updated_at columns
     underscored: true,
-    modelName: 'Event',
-    tableName: 'events', // Customize the table name if needed
+    modelName: 'event',
+    tableName: 'event', // Customize the table name if needed
     paranoid: true, // Enable soft deletes
     comment: 'Table storing information about events',
   }

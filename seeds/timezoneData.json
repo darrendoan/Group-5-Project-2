@@ -1,0 +1,32 @@
+[
+  {
+    "description":"(UTC+08:00) Perth",
+    "offset": 8,
+    "abbreviation": "WAST"
+  },
+  {
+    "description":"(UTC+09:30) Adelaide",
+    "offset": 9.5,
+    "abbreviation": "CAST"
+  },
+  {
+    "description":"(UTC+09:30) Darwin",
+    "offset": 9.5,
+    "abbreviation": "ACST"
+  },
+  {
+    "description":"(UTC+10:00) Brisbane",
+    "offset": 10,
+    "abbreviation": "EAST"
+  },
+  {
+    "description":"(UTC+10:00) Canberra, Melbourne, Sydney",
+    "offset": 10,
+    "abbreviation": "AEST"
+  },
+  {
+    "description":"(UTC+10:00) Hobart",
+    "offset": 10,
+    "abbreviation": "TST"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "status_id": 1,
+    "title": "First Event",
+    "description": "Description for the first event.",
+    "start_date": "2024-03-20 22:00:00",
+    "end_date": "2024-03-20 20:00:00",
+    "timezone_id": 1,
+    "game_id": 1,
+    "platform_id": 1,
+    "min_player": 2,
+    "max_player": 10,
+    "organizer_id": 1
+  },
+  {
+    "status_id": 1,
+    "title": "Second Event",
+    "description": "Description for the second event.",
+    "start_date": "2024-03-25 15:00:00",
+    "end_date": "2024-03-25 18:00:00",
+    "timezone_id": 2,
+    "game_id": 1,
+    "platform_id": 1,
+    "min_player": 2,
+    "max_player": 10,
+    "organizer_id": 1
+  }
+]

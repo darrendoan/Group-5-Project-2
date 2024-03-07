@@ -1,0 +1,17 @@
+[
+  {
+    "game_name": "FIFA 2024",
+    "min_player": 2,
+    "max_player": 10
+  },
+  {
+    "game_name": "Basketball League",
+    "min_player": 2,
+    "max_player": 10
+  },
+  {
+    "game_name": "Volleyball Challenge",
+    "min_player": 2,
+    "max_player": 10
+  }
+]
