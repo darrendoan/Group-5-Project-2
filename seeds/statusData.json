@@ -1,0 +1,14 @@
+[
+  {
+    "status_name": "Registered"
+  },
+  {
+    "status_name": "Completed"
+  },
+  {
+    "status_name": "Finished"
+  },
+  {
+    "status_name": "Canceled"
+  }
+]
