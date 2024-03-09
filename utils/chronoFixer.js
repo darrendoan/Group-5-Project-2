@@ -3,7 +3,7 @@
 /**
  * Functions
  * - inferTimezone(ip) - Return the timezone of the user relative to their requesting IP
- * - getRelativeTimestamp(timestamp, offset) - Return a string with the timezone represented relative to the given timezone
+ * - getTime(timestamp, offset) - Return a string with the timezone represented relative to the given timezone
  */
 
 const NodeGeolocation = require('nodejs-geolocation').default;
