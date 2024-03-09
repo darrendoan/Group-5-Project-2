@@ -10,7 +10,7 @@
     "platform_id": 1,
     "min_player": 2,
     "max_player": 10,
-    "organizer_id": 1
+    "organizer_id": "email|6C6F6C6C6D616F726F666C6D"
   },
   {
     "status_id": 1,
@@ -23,6 +23,6 @@
     "platform_id": 1,
     "min_player": 2,
     "max_player": 10,
-    "organizer_id": 1
+    "organizer_id": "email|6C6F6C6C6D616F726F666C6D"
   }
 ]
