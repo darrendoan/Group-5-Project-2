@@ -8,6 +8,7 @@ User.init(
     id: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       primaryKey: true,
       comment: 'Unique identifier for the user',
     },
@@ -19,7 +20,7 @@ User.init(
           msg: 'Name cannot be null.',
         },
         notEmpty: {
-          msg: 'ame cannot be empty.',
+          msg: 'Name cannot be empty.',
         },
         len: {
           args: [1, 50],
