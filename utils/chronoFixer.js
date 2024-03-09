@@ -3,18 +3,27 @@
 /**
  * Functions
  * - inferTimezone(ip) - Return the timezone of the user relative to their requesting IP
- * - normaliseTimestamp(timestamp) - Strip user's timezone offset for a normalised value
  * - getRelativeTimestamp(timestamp, offset) - Return a string with the timezone represented relative to the given timezone
  */
 
-function inferTimezone(ip) {
+const NodeGeolocation = require('nodejs-geolocation').default;
+const geo = new NodeGeolocation('Spawnpoint');
+require('dotenv').config();
 
+geo.ipGeolocationOptions = {
+    service: 'ipinfo',
+    key: process.env.GEOIP_KEY
 }
 
-function normaliseTimestamp(timestamp) {
-    
+async function inferTimezone(ip) {
+    return (await geo.getLocation(ip)).timezone;
 }
 
 function getRelativeTimestamp(timestamp, offset) {
+    
+}
 
+module.exports = {
+    inferTimezone,
+    getRelativeTimestamp
 }
