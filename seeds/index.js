@@ -1,22 +1,16 @@
 const sequelize = require('../config/connection');
-const { Event, Game, Platform, Status, Timezone, User } = require('../models');
+const { Event, Game, Platform, Status, User } = require('../models');
 
 const eventData = require('./eventData.json');
 const gameData = require('./gameData.json');
 const platformData = require('./platformData.json');
 const statusData = require('./statusData.json');
-const timezoneData = require('./timezoneData.json');
 const userData = require('./userData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   await Status.bulkCreate(statusData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  await Timezone.bulkCreate(timezoneData, {
     individualHooks: true,
     returning: true,
   });

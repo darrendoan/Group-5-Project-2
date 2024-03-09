@@ -4,6 +4,7 @@
 // Import user model and original requiresAuth function for our helper
 const { requiresAuth: oidcAuth } = require('express-openid-connect');
 const { User } = require('../models');
+const chrono = require('../utils/chronoFixer');
 
 function requiresAuth() {
     // Because a function is required instead of a promise, we have to wrap the code for the middleware inside this block
@@ -19,7 +20,7 @@ function requiresAuth() {
                             defaults: {
                                 id: req.oidc.user.sub,
                                 name: req.oidc.user.nickname,
-                                timezone_id: 1 // TODO: Update to use chronofixer function instead
+                                timezone: chrono.inferTimezone(req.ip)
                             }
                         });
                 } catch (error) {

@@ -1,6 +1,5 @@
 const Event = require('./Event');
 const Status = require('./Status');
-const Timezone = require('./Timezone');
 const Game = require('./Game');
 const Platform = require('./Platform');
 const User = require('./User');
@@ -14,16 +13,6 @@ Event.hasMany(Status, {
 
 Status.belongsTo(Event, {
   foreignKey: 'status_id'
-});
-
-/*  Relation Event - Timezone*/
-Event.hasMany(Timezone, {
-  foreignKey: 'timezone_id',
-  onDelete: 'CASCADE'
-});
-
-Timezone.belongsTo(Event, {
-  foreignKey: 'timezone_id'
 });
 
 /*  Relation Event - Game*/
@@ -69,4 +58,4 @@ User.belongsToMany(Event, {
   as: 'user_events'
 });
 
-module.exports = { Event, Status, Timezone, Game, Platform, User, EventParticipant };
+module.exports = { Event, Status, Game, Platform, User, EventParticipant };
