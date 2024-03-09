@@ -19,7 +19,7 @@ function requiresAuth() {
                             defaults: {
                                 id: req.oidc.user.sub,
                                 name: req.oidc.user.nickname,
-                                timezone_id: 1
+                                timezone_id: 1 // TODO: Update to use chronofixer function instead
                             }
                         });
                 } catch (error) {
