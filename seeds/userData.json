@@ -2,7 +2,7 @@
   {
     "id": "email|6C6F6C6C6D616F726F666C6D",
     "name": "John D",
-    "timezone_id": "Australia/Sydney",
+    "timezone": "Australia/Sydney",
     "active": true
   },
   {

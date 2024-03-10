@@ -5,6 +5,12 @@ const path = require('path');
 //  Auth0 integration
 const { auth } = require('express-openid-connect');
 const authConfig = require('./config/auth');
+
+// Temporary imports for test endpoint
+const requiresAuth = require('./utils/auth');
+const { getTime } = require('./utils/chronoFixer');
+const { User } = require('./models');
+
 //  View
 const exphbs = require('express-handlebars');
 //  Model
@@ -38,6 +44,19 @@ app.use(require('./controllers/index'));
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
+});
+
+// Test endpoint
+app.get('/test', requiresAuth(), async (req, res) => {
+  const userData = (await User.findByPk(req.oidc.user.sub)).get({plain: true});
+  const results = {
+    user: userData,
+    timeFormatted: {
+      created: getTime(userData['created_at'], userData['timezone']),
+      updated: getTime(userData['updated_at'], userData['timezone'])
+    }
+  }
+  res.json(results)
 });
 
 // Start the server after synchronizing Sequelize models with the database
