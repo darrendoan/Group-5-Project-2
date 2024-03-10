@@ -10,7 +10,7 @@ router.get('/', requiresAuth(), async (req, res) => {
     // Serialize data so the template can read it
     const events = eventData.map((event) => event.get({ plain: true }));
 
-    res.render('homepage', { 
+    res.render('test', { 
       events,
       logged_in: req.oidc.isAuthenticated() // oidc helper that returns a bool if logged in
     });
