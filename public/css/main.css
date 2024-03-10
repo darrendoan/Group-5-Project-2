@@ -200,6 +200,7 @@ footer {
 .controls {
   margin-top: 20px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .controls button {
