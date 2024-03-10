@@ -1,0 +1,14 @@
+[
+  {
+    "id": "email|6C6F6C6C6D616F726F666C6D",
+    "name": "John D",
+    "timezone_id": "Australia/Sydney",
+    "active": true
+  },
+  {
+    "id": "email|716272776E66786C7A796467",
+    "name": "Joe B",
+    "timezone": "Australia/Sydney",
+    "active": true
+  }
+]

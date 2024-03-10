@@ -6,111 +6,51 @@ class User extends Model {}
 User.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       primaryKey: true,
-      autoIncrement: true,
       comment: 'Unique identifier for the user',
     },
-    fName: {
+    name: {
       type: DataTypes.STRING(50),
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'First name cannot be null.',
+          msg: 'Name cannot be null.',
         },
         notEmpty: {
-          msg: 'First name cannot be empty.',
+          msg: 'Name cannot be empty.',
         },
         len: {
           args: [1, 50],
-          msg: 'First name must be between 1 and 50 characters.',
+          msg: 'Name must be between 1 and 50 characters.',
         },
       },
       comment: 'First name of the user',
     },
-    lName: {
-      type: DataTypes.STRING(50),
+    timezone: {
+      type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Last name cannot be null.',
-        },
-        notEmpty: {
-          msg: 'Last name cannot be empty.',
-        },
-        len: {
-          args: [1, 50],
-          msg: 'Last name must be between 1 and 50 characters.',
-        },
-      },
-      comment: 'Last name of the user',
-    },
-    userName: {
-      type: DataTypes.STRING(30),
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Username cannot be null.',
-        },
-        notEmpty: {
-          msg: 'Username cannot be empty.',
-        },
-        len: {
-          args: [1, 30],
-          msg: 'Username must be between 1 and 30 characters.',
-        },
-      },
-      comment: 'Username of the user',
-    },
-    phoneNumber: {
-      type: DataTypes.STRING(15),
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Phone number cannot be null.',
-        },
-        notEmpty: {
-          msg: 'Phone number cannot be empty.',
-        },
-        len: {
-          args: [1, 15],
-          msg: 'Phone number must be between 1 and 15 characters.',
-        },
-      },
-      comment: 'Phone number of the user',
-    },
-    email: {
-      type: DataTypes.STRING(100),
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Email cannot be null.',
-        },
-        notEmpty: {
-          msg: 'Email cannot be empty.',
-        },
-        isEmail: {
-          msg: 'Invalid email format.',
-        },
-      },
-      comment: 'Email of the user',
+      comment: 'Timezone of the event',
     },
     active: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
       comment: 'User account activation status',
     },
-    createdAt: {
+    created_at: {
       type: DataTypes.DATE,
+      allowNull: false,
       defaultValue: DataTypes.NOW,
-      comment: 'Timestamp of when the user account was created',
+      comment: 'Timestamp of when the user was created',
     },
-    updatedAt: {
+    updated_at: {
       type: DataTypes.DATE,
+      allowNull: false,
       defaultValue: DataTypes.NOW,
       onUpdate: DataTypes.NOW,
-      comment: 'Timestamp of when the user account was last updated',
+      comment: 'Timestamp of when the user was last updated',
     },
   },
   {
@@ -118,8 +58,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
-    tableName: 'users', 
+    modelName: 'user',
+    tableName: 'user', 
     paranoid: true, 
     comment: 'Table storing information about users',
   }

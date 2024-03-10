@@ -1,6 +1,6 @@
 <h1 align ="center">Spawnpoint</h1>
 
-![HTML/CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-red) ![Node.js](https://img.shields.io/badge/Node.js-orange) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![MySQL2@3.9.2](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender) ![eslint@8.57.0](https://img.shields.io/badge/eslint@8.57.0-babyblue)
+![HTML/CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-red) ![Node.js](https://img.shields.io/badge/Node.js-orange) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![MySQL2@3.9.2](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender) ![eslint@8.57.0](https://img.shields.io/badge/eslint@8.57.0-babyblue)  ![MagicLink](https://img.shields.io/badge/MagicLink-lightgreen)
 
 <h2 align ="center">Spawnpoint</h2>
 
@@ -120,10 +120,10 @@ THEN I should be removed from all events
 
 ## APIs Used
 
-- [example](https://.../)
+- [MailGun](https://documentation.mailgun.com/)
 
 ```md
-URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
+URL: https://documentation.mailgun.com/
 ```
 
 - [example](https://.../)
@@ -143,6 +143,7 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 - Handlebars.js
 - Dotenv
 - eslint
+- MailGun
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
 
@@ -150,10 +151,10 @@ URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
 
 | Contributors                                       | Roles                | Task                                                                          |
 | -------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
-| [Darren Doan](https://github.com/darrendoan)             | Full Stack Developer | Created and Maintained Github Repository<br>                                  |
-| [Jean Piere ](https://github.com/)                        | Full Stack Developer | Project Manager/Developer<br>                                                                  |
-| [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer | Database<br> Created and Completed README<br> Prepared Presentation Slideshow |
-| [Nathaniel Poulson](https://github.com/natpoulson) | Full Stack Developer | Project Manager/Developer                                                     |
+| [Darren Doan](https://github.com/darrendoan)             | Full Stack Developer | View<br>Created and Maintained Github Repository<br>                                  |
+| [Jean Piere ](https://github.com/)                        | Snr Full Stack Developer | Database - Model<br>Controller<br>                                                                  |
+| [Muhamad Sahid](https://github.com/BrxwnSugxr)     | Full Stack Developer | Database - Model<br>View<br> Created and Completed README<br> Prepared Presentation Slideshow |
+| [Nathaniel Poulson](https://github.com/natpoulson) | Project Manager/Developer |     database architecture<br>  Auth0 and manage user sessions                                               |
 
 _The roles mentioned above are rough representation of individual member's tasks. Thoroughout the project, we all collaborated and contributed to each other's coding._
 
@@ -165,9 +166,10 @@ _The roles mentioned above are rough representation of individual member's tasks
 
 ## Installation Instruction
 
-- [Install nodejs and npm](https://nodejs.org/en/download)
-- [Install Insomnia](https://insomnia.rest/download)
-- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
+-  "start": "node server.js",
+-  "watch": "nodemon server.js",
+-  "seed": "node ./seeds/index.js"
+
 
 ## License
 

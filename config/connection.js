@@ -11,12 +11,13 @@ const sequelize = new Sequelize(
     // Read database user from the environment variable DB_USER
     process.env.DB_USER,
     // Read database password from the environment variable DB_PASSWORD
-    process.env.DB_PW,
+    process.env.DB_PASSWORD,
 
   {
     host: 'localhost', // Database host (localhost in this case)
     dialect: 'mysql', // Database dialect (MySQL in this case)
     port: 3306, // Database port (default MySQL port)
+    timezone: '+00:00' // Force the database to store at 00:00 offset for timezone applications
   }
 );
 
