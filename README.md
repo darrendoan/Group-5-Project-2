@@ -166,9 +166,10 @@ _The roles mentioned above are rough representation of individual member's tasks
 
 ## Installation Instruction
 
-- [Install nodejs and npm](https://nodejs.org/en/download)
-- [Install Insomnia](https://insomnia.rest/download)
-- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
+-  "start": "node server.js",
+-  "watch": "nodemon server.js",
+-  "seed": "node ./seeds/index.js"
+
 
 ## License
 
