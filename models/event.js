@@ -53,13 +53,9 @@ Event.init(
       allowNull: false,
       comment: 'End date and time of the event',
     },
-    timezone_id: {
-      type: DataTypes.INTEGER,
+    timezone: {
+      type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'timezone',
-        key: 'id',
-      },
       comment: 'Timezone of the event',
     },
     game_id: {

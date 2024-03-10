@@ -9,6 +9,7 @@ const session = require('express-session'); // Maybe not needed after all?
 const config = require('./config/auth.js');
 const db = require('./config/connection.js');
 const { User } = require('./models');
+const chrono = require('./utils/chronoFixer.js');
 
 const PORT = process.env.DEV_PORT;
 const app = express();
@@ -21,6 +22,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+app.set('trust proxy', true); // Enables client IP to be passed on through proxied connection, needed for load balanced environments
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -30,6 +32,12 @@ app.get('/', (req, res) => {
         headers: req.headers,
         body: req.body
     });
+});
+
+app.get('/timezone', async (req, res) => {
+    const timezone = await chrono.inferTimezone('167.179.158.92');
+    const timeData = chrono.getTime(Date.now(), timezone);
+    res.status(200).json(timeData);
 });
 
 app.get('/test', requiresAuth(), async (req, res) => {

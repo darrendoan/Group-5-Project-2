@@ -29,13 +29,9 @@ User.init(
       },
       comment: 'First name of the user',
     },
-    timezone_id: {
-      type: DataTypes.INTEGER,
+    timezone: {
+      type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'timezone',
-        key: 'id',
-      },
       comment: 'Timezone of the event',
     },
     active: {

@@ -17,6 +17,7 @@ const sequelize = new Sequelize(
     host: 'localhost', // Database host (localhost in this case)
     dialect: 'mysql', // Database dialect (MySQL in this case)
     port: 3306, // Database port (default MySQL port)
+    timezone: '+00:00' // Force the database to store at 00:00 offset for timezone applications
   }
 );
 
