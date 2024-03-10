@@ -17,10 +17,10 @@ geo.ipGeolocationOptions = {
 }
 
 async function inferTimezone(ip) {
-    let tz = (await geo.getLocation(ip)).timezone
-        if (tz === '::1' || tz === '127.0.0.1') {
-            tz = 'Australia/Sydney';
-        }
+    let tz = 'Australia/Sydney';
+    if (ip !== '::1' && ip !== '127.0.0.1') {
+        tz = (await geo.getLocation(ip)).timezone
+    }
     return tz;
 }
 
