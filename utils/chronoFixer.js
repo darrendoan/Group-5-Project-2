@@ -11,14 +11,38 @@ const moment = require('moment-timezone');
 const geo = new NodeGeolocation('Spawnpoint');
 require('dotenv').config();
 
+// All configurable strings here in case you need to alter the parameters
+const setting = {
+    DEFAULT_TZ: 'Australia/Sydney',
+    GEOIP_SERVICE: 'ipinfo',
+    LOOPBACK: {
+        IP6: '::1',
+        IP4: '127.0.0.1'
+    },
+    MASK: {
+        FULL: 'dddd Do MMMM YYYY, hh:mm A',
+        DATE: 'DD/MM/YYYY',
+        TIME: 'hh:mm A'
+    },
+    UNIT: {
+        DAY: 'DD',
+        MONTH: 'MM',
+        YEAR: 'YYYY',
+        HOUR24: 'HH',
+        HOUR12: 'hh',
+        MINUTE: 'mm',
+        MERIDIEM: 'A'
+    }
+}
+
 geo.ipGeolocationOptions = {
-    service: 'ipinfo',
+    service: setting.GEOIP_SERVICE,
     key: process.env.GEOIP_KEY
 }
 
 async function inferTimezone(ip) {
-    let tz = 'Australia/Sydney';
-    if (ip !== '::1' && ip !== '127.0.0.1') {
+    let tz = DEFAULT_TZ;
+    if (ip !== setting.LOOPBACK.IP6 && ip !== setting.LOOPBACK.IP4) {
         tz = (await geo.getLocation(ip)).timezone
     }
     return tz;
@@ -29,18 +53,18 @@ function getTime(timestamp, offset) {
     return {
         raw: tz.format(),
         formatted: {
-            date: tz.format('DD/MM/YYYY'),
-            time: tz.format('hh:mm A'),
-            full: tz.format('dddd Do MMMM YYYY, hh:mm A')
+            date: tz.format(setting.MASK.DATE),
+            time: tz.format(setting.MASK.TIME),
+            full: tz.format(setting.MASK.FULL)
         },
         unit: {
-            day: tz.format('DD'),
-            month: tz.format('MM'),
-            year: tz.format('YYYY'),
-            hour12: tz.format('hh'),
-            hour24: tz.format('HH'),
-            minute: tz.format('mm'),
-            meridiem: tz.format('A')
+            day: tz.format(setting.UNIT.DAY),
+            month: tz.format(setting.UNIT.MONTH),
+            year: tz.format(setting.UNIT.YEAR),
+            hour24: tz.format(setting.UNIT.HOUR24),
+            hour12: tz.format(setting.UNIT.HOUR12),
+            minute: tz.format(setting.UNIT.MINUTE),
+            meridiem: tz.format(setting.UNIT.MERIDIEM)
         }
     }
 }
