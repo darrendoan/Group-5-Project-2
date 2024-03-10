@@ -17,7 +17,11 @@ geo.ipGeolocationOptions = {
 }
 
 async function inferTimezone(ip) {
-    return (await geo.getLocation(ip)).timezone;
+    let tz = (await geo.getLocation(ip)).timezone
+        if (tz === '::1' || tz === '127.0.0.1') {
+            tz = 'Australia/Sydney';
+        }
+    return tz;
 }
 
 function getTime(timestamp, offset) {

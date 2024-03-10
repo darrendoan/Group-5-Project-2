@@ -13,12 +13,6 @@ function requiresAuth() {
         oidcAuth()(req, res, async () => {
             if (req.oidc.isAuthenticated()) {
                 try {
-                    let tz = chrono.inferTimezone(req.ip);
-                    // Compensate for loopback IPs being passed from internal testing
-                    if (tz === '::1' || tz === '127.0.0.1') {
-                        tz = 'Australia/Sydney';
-                    }
-                    
                         await User.findOrCreate({
                             where: {
                                 id: req.oidc.user.sub
@@ -26,7 +20,7 @@ function requiresAuth() {
                             defaults: {
                                 id: req.oidc.user.sub,
                                 name: req.oidc.user.nickname,
-                                timezone: tz
+                                timezone: chrono.inferTimezone(req.ip)
                             }
                         });
                 } catch (error) {
