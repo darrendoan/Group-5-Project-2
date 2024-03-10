@@ -41,7 +41,7 @@ geo.ipGeolocationOptions = {
 }
 
 async function inferTimezone(ip) {
-    let tz = DEFAULT_TZ;
+    let tz = setting.DEFAULT_TZ;
     if (ip !== setting.LOOPBACK.IP6 && ip !== setting.LOOPBACK.IP4) {
         tz = (await geo.getLocation(ip)).timezone
     }
