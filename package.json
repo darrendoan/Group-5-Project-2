@@ -1,26 +1,30 @@
 {
-    "name": "spawnpoint",
-    "version": "1.0.0",
-    "description": "Spawnpoint is a collaborative platform that allows gamers to discover, host, create, and join gaming events such as tournaments, LAN parties, and online matches. Users can browse upcoming events, create their own events, and connect with fellow gamers.",
-    "main": "server.js",
-    "scripts": {
-        "start": "node server.js",
-        "watch": "nodemon server.js",
-        "seed": "node ./seeds/index.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "MIT",
-    "dependencies": {
-        "dotenv": "^16.4.5",
-        "express": "^4.18.3",
-        "handlebars": "^4.7.8",
-        "mysql2": "^3.9.2",
-        "nodemon": "^3.1.0",
-        "sequelize": "^6.37.1",
-        "express-openid-connect": "^2.17.1"
-    },
-    "devDependencies": {
-        "eslint": "^8.57.0"
-    }
+  "name": "spawnpoint",
+  "version": "1.0.0",
+  "description": "Spawnpoint is a collaborative platform that allows gamers to discover, host, create, and join gaming events such as tournaments, LAN parties, and online matches. Users can browse upcoming events, create their own events, and connect with fellow gamers.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node ./seeds/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-handlebars": "^6.0.6",
+    "express-openid-connect": "^2.17.1",
+    "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0",
+    "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
 }
