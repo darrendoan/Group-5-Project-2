@@ -3,6 +3,11 @@ const express = require('express');
 const session = require('express-session');
 const routes = require('./controllers'); // Import routes
 const exphbs = require('express-handlebars');
+// We're renaming this to oidcAuth so we can substitute with our own custom middleware implementation
+const { auth } = require('express-openid-connect');
+
+const config = require('./config/auth.js');
+
 // const helpers = require('./helpers'); // Import helper functions
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -13,6 +18,7 @@ const app = express();
 const PORT = process.env.PORT || 3001; // Set the port for the server
 const hbs = exphbs.create({ });
 
+app.use(auth(config));
 // Set up Handlebars as the template engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
