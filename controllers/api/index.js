@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const eventRoutes = require('./event-Routes');
-const eventParticipantRoutes = require('./event-participant-Routes');
+const eventRoutes = require('./event-routes');
 
 router.use('/events', eventRoutes);
 router.use('/eventsParticipants', eventParticipantRoutes);
