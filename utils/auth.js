@@ -20,7 +20,7 @@ function requiresAuth() {
                             defaults: {
                                 id: req.oidc.user.sub,
                                 name: req.oidc.user.nickname,
-                                timezone: chrono.inferTimezone(req.ip)
+                                timezone: await chrono.inferTimezone(req.ip)
                             }
                         });
                 } catch (error) {
