@@ -3,7 +3,7 @@
 ![HTML/CSS](https://img.shields.io/badge/CSS-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-red) ![Node.js](https://img.shields.io/badge/Node.js-orange) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-grey) ![MySQL2@3.9.2](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-lavender) ![eslint@8.57.0](https://img.shields.io/badge/eslint@8.57.0-babyblue)  ![MagicLink](https://img.shields.io/badge/MagicLink-lightgreen)
 
 <h2 align ="center">Spawnpoint</h2>
-
+https://spawnpoint.tech 
 Gaming Event Hub is a platform that allows gamers to discover, host, create, and join gaming events such as tournaments, LAN parties, and online matches. Users can browse upcoming events, create their own events, and connect with fellow gamers.
 
 ## Table of Contents
@@ -12,8 +12,6 @@ Gaming Event Hub is a platform that allows gamers to discover, host, create, and
 - [Acceptance Criteria](#acceptance-criteria)
 - [Usage](#Usage)
 - [Instruction](#instruction)
-- [Overview](#overview)
-- [Screenshots](#screenshots)
 - [APIs Used](#apis-used)
 - [Technologies Used](#technologies-used)
 - [Contribution/Roles](#contributionroles)
@@ -103,20 +101,6 @@ THEN I should be removed from all events
 | Live application | [Spawnpoint](https://github.com/darrendoan/Group-5-Project-2.git) |
 | Clone this repo  | ` git clone https://github.com/darrendoan/Group-5-Project-2.git`  |
 | run on vs        | `cd ..`                                                           |
-
-## Instruction
-
-## Overview
-
-#### Features:
-
-#### Motivation For Development:
-
-#### Challenges:
-
-#### Successes:
-
-## Screenshots
 
 ## APIs Used
 
