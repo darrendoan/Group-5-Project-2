@@ -9,3 +9,6 @@ DS_store/
 
 # Ignore Package-lock.json
 package-lock.json
+
+# ignore views_old
+views_old/
