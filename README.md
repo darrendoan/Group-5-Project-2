@@ -126,12 +126,6 @@ THEN I should be removed from all events
 URL: https://documentation.mailgun.com/
 ```
 
-- [example](https://.../)
-
-```md
-URL: https://api.rawg.io/api/games?key={YOUR-API-KEY}
-```
-
 ## Technologies Used
 
 - HTML/CSS
