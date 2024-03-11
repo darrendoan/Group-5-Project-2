@@ -1,12 +1,20 @@
-<header>
-      <div class="header-left">
-        <img src="../assets/images/logo.png" alt="Gaming Event Hub Logo" />
-        <h1>Gaming Event Hub</h1>
+<header class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+      <div class="navbar-brand">
+        <h1>Spawnpoint</h1>
       </div>
-      <nav class="header-right">
-        <button>Home</button>
-        <button>Events</button>
-        <a href="../create-event.html" class="button">Create Event</a>
-        <a href="/login" class="button">Register or Sign-in!</a>
+      <nav class="navbar-nav d-flex flex-row">
+          {{#if logged_in}}
+          <a class="nav-link me-2" href="/">Dashboard</a>
+          <a class="nav-link me-2" href="/games">Games</a>
+          <a class="nav-link me-2" href="/events">Events</a>
+          <a class="nav-link" href="/logout">Sign Out</a>
+          {{else}}
+          <a class="nav-link me-2" href="/">Home</a>
+          <a class="nav-link me-2" href="/games">Games</a>
+          <a class="nav-link me-2" href="/events">Events</a>
+          <a class="nav-link" href="/login">Sign In</a>
+          {{/if}}
       </nav>
+  </div>
 </header>

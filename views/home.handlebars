@@ -1,5 +1,29 @@
-{{#if logged_in}}
-<h1>YAY</h1>
-{{else}}
-<h1>BOO</h1>
-{{/if}}
+<section class="flex-grow-1">
+    {{!-- Featured events --}}
+    <div>
+        {{#if featured}}
+            {{#each featured as |feature|}}
+            {{> featured-event}}
+            {{/each}}
+        {{else}}
+            <span>No upcoming events found</span>
+        {{/if}}
+    </div>
+</section>
+<section class="flex-grow-1">
+    {{!-- Upcoming events--}}
+    <div>
+
+    </div>
+    {{!-- User profile/quick actions --}}
+    {{#if logged_in}}
+    <div class="flex-column">
+        <div>
+            {{!-- Profile settings --}}
+        </div>
+        <div>
+            {{!-- Quick actions (Add event/add game) --}}
+        </div>
+    </div>
+    {{/if}}
+</section>
