@@ -1,0 +1,70 @@
+<div class="create-event">
+  <h2>Create an Event <button onclick="exit()" class="exit-button">X</button></h2>
+  <div class="user-box">
+    <img src="../assets/images/tw.png" />
+    <h4>{{userName}}<br />{{userDescription}}</h4>
+  </div>
+
+
+  <br />
+  <br />
+  <br />
+  <div class="event-name">
+    <input type="text" id="eventTime" name="eventTime" required placeholder="Event Name:" />
+  </div>
+  <form>
+    <br />
+    <br />
+    <div class="event-date">
+      <div>
+        <input type="date" id="eventDate" name="eventDate" required />
+      </div>
+      <div>
+        <input type="time" id="eventTime" name="eventTime" required />
+      </div>
+
+    </div>
+
+    <br />
+    <br />
+
+    <div>
+      <select aria-placeholder="SELECT platform">
+        <option>SELECT platform</option>
+        <option>SELECT platform</option>
+        <option>SELECT platform</option>
+        <option>SELECT platform</option>
+      </select>
+    </div>
+
+    <br />
+    <div>
+      <select aria-placeholder="SELECT platform">
+        <option>SELECT platform</option>
+        <option>SELECT platform</option>
+        <option>SELECT platform</option>
+        <option>SELECT platform</option>
+      </select>
+    </div>
+
+    <br />
+    <br />
+    <button class="invite-button">Send Invite</button>
+
+    <select multiple>
+      <option>SELECT platform</option>
+      <option>SELECT platform</option>
+      <option>SELECT platform</option>
+      <option>SELECT platform</option>
+    </select>
+    <div>
+      <button class="exit-btn" onclick="exit()">Exit</button>
+    </div>
+  </form>
+</div>
+<script src="./public/scripts/script.js"></script>
+<script>
+  function exit() {
+    window.location.href = './layout/index.html';
+  }
+</script>
