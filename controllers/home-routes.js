@@ -9,9 +9,9 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const events = eventData.map((event) => event.get({ plain: true }));
 
-    res.render('test', { 
+    res.render('test', {
       events,
-      logged_in: req.oidc.isAuthenticated() // oidc helper that returns a bool if logged in
+      logged_in: req.oidc.isAuthenticated(), // oidc helper that returns a bool if logged in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -26,7 +26,7 @@ router.get('/event/:id', async (req, res) => {
 
     res.render('event', {
       ...event,
-      logged_in: req.oidc.isAuthenticated() // oidc helper that returns a bool if logged in
+      logged_in: req.oidc.isAuthenticated(), // oidc helper that returns a bool if logged in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -34,4 +34,3 @@ router.get('/event/:id', async (req, res) => {
 });
 
 module.exports = router;
-

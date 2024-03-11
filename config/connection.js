@@ -9,20 +9,22 @@ let sequelize;
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
-    // Create a Sequelize connection instance
+  // Create a Sequelize connection instance
+  const { DB_NAME, DB_USER, DB_PASSWORD } = process.env;
+  console.log({ DB_NAME, DB_USER, DB_PASSWORD });
   sequelize = new Sequelize(
-      // Read database name from the environment variable DB_NAME
-      process.env.DB_NAME,
-      // Read database user from the environment variable DB_USER
-      process.env.DB_USER,
-      // Read database password from the environment variable DB_PASSWORD
-      process.env.DB_PASSWORD,
+    // Read database name from the environment variable DB_NAME
+    process.env.DB_NAME,
+    // Read database user from the environment variable DB_USER
+    process.env.DB_USER,
+    // Read database password from the environment variable DB_PASSWORD
+    process.env.DB_PASSWORD,
 
     {
       host: 'localhost', // Database host (localhost in this case)
       dialect: 'mysql', // Database dialect (MySQL in this case)
       port: 3306, // Database port (default MySQL port)
-      timezone: '+00:00' // Force the database to store at 00:00 offset for timezone applications
+      timezone: '+00:00', // Force the database to store at 00:00 offset for timezone applications
     }
   );
 }
