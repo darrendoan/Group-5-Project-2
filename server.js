@@ -29,10 +29,13 @@ app.set('view engine', 'handlebars');
 // Init JSON and URL encoding
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+app.get('/test123', (req, res) => {
+  res.render('test');
+});
 // Start the server after synchronizing Sequelize models with the database
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
