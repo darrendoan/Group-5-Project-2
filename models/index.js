@@ -1,8 +1,8 @@
-const Event = require('./Event');
-const Status = require('./Status');
-const Game = require('./Game');
-const Platform = require('./Platform');
-const User = require('./User');
+const Event = require('./event');
+const Status = require('./status');
+const Game = require('./game');
+const Platform = require('./platform');
+const User = require('./user');
 const EventParticipant = require('./eventParticipant');
 
 /*  Relation Event - Status*/
