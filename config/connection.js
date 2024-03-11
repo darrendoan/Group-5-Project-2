@@ -10,8 +10,6 @@ if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   // Create a Sequelize connection instance
-  const { DB_NAME, DB_USER, DB_PASSWORD } = process.env;
-  console.log({ DB_NAME, DB_USER, DB_PASSWORD });
   sequelize = new Sequelize(
     // Read database name from the environment variable DB_NAME
     process.env.DB_NAME,

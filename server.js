@@ -18,6 +18,10 @@ const app = express();
 const PORT = process.env.PORT || 3001; // Set the port for the server
 const hbs = exphbs.create({});
 
+// Register partials from Handlebars
+const hbPartials = require('./utils/registerPartials');
+hbPartials();
+
 // Init Auth0
 app.use(auth(authConfig));
 app.set('trust proxy', true);
