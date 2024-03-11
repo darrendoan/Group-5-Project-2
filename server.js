@@ -31,11 +31,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+// Source: https://jaketrent.com/post/https-redirect-node-heroku/
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
+
 app.use(routes);
 
 app.get('/test123', (req, res) => {
   res.render('test');
 });
+
 // Start the server after synchronizing Sequelize models with the database
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
