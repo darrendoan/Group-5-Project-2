@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { Event } = require('../models');
-const requiresAuth = require('../utils/auth');
 
-router.get('/', requiresAuth(), async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const eventData = await Event.findAll();
