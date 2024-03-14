@@ -11,28 +11,23 @@ const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   await Status.bulkCreate(statusData, {
-    individualHooks: true,
-    returning: true,
+    individualHooks: true
   });
 
   await Game.bulkCreate(gameData, {
-    individualHooks: true,
-    returning: true,
+    individualHooks: true
   });
 
   await Platform.bulkCreate(platformData, {
-    individualHooks: true,
-    returning: true,
+    individualHooks: true
   });
 
   await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
+    individualHooks: true
   });
   
   await Event.bulkCreate(eventData, {
-    individualHooks: true,
-    returning: true,
+    individualHooks: true
   });
 
   process.exit(0);

@@ -1,66 +1,16 @@
-<div class="event-box">
+<div class="event-box ms-2 me-2 flex-grow-1">
     <div class="event-header">
-        <h1 class="header">Selected Event</h1>
-        <br />
-        <br />
-        <p class="desciption">{{time}}-{{platform}}-{{maxPlayer}}-{{gamesnofes}}</p>
-    </div>
-
-
-    <div class="carousel">
-        <div class="carousel-left">
-            ←
+        <h2 class="header">{{title}}</h2>
+        {{#if logged_in}}
+        <p class="desciption">{{description}}</p>
+        {{/if}}
+        <div>
+            <p><strong>Status</strong>: {{status.status_name}}</p>
+            <p><strong>Game</strong>: {{game.game_name}}</p>
+            <p><strong>Platform</strong>: {{platform.platform_name}}</p>
+            {{#if logged_in}}
+            <p><strong>Organiser</strong>: {{organiser.name}}</p>
+            {{/if}}
         </div>
-        <div class="inner">
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-            <div class="carousel-item">
-                p
-            </div>
-        </div>
-
-
-        <div class="carousel-right">→</div>
     </div>
-
-    <div style="text-align: left;">
-        <h1>Comments:</h1>
-        <ul>
-            <li>Comment 1</li>
-            <li>Comment 2</li>
-            <li>Comment 3</li>
-            <li>Comment 4</li>
-            <li>Comment 5</li>
-            <li>Comment 7</li>
-        </ul>
-        <p>{{item}}</p>
-    </div>
-
-
-
-    <button>
-        Attent
-    </button>
 </div>

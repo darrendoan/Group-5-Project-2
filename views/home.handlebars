@@ -1,23 +1,18 @@
-<section class="flex-grow-1">
+<section class="flex-grow-1 ms-2 me-2">
+    <h2>Featured Events</h2>
+    <hr />
     {{!-- Upcoming events--}}
-    <div>
+    <div class="d-flex justify-content-evenly">
         {{#if events}}
             {{#each events as |event|}}
-            {{> event-tile}}
+            {{!-- 
+                We need to manually pass these into the partial so we can include the logged_in attribute
+                otherwise it's out of scope and auth-related checks can't occur
+            --}}
+            {{> event-tile event=event logged_in=../logged_in}}
             {{/each}}
         {{else}}
         No events found
         {{/if}}
     </div>
-    {{!-- User profile/quick actions --}}
-    {{#if logged_in}}
-    <div class="flex-column">
-        <div>
-            {{!-- Profile settings --}}
-        </div>
-        <div>
-            {{!-- Quick actions (Add event/add game) --}}
-        </div>
-    </div>
-    {{/if}}
 </section>

@@ -1,7 +1,10 @@
-<a href="/event/{{id}}">
-    <div>
-        <div>{{title}}</div>
-        <div>{{getFormattedStamp start_date timezone "dateTime" true}}</div>
-        <div>{{getFormattedStamp end_date timezone "dateTime" true}}</div>
+<a href="/event/{{id}}" class="text-decoration-none">
+    <div class="card p-1">
+        <div class="card card-title bg-primary text-white ps-1"><strong>{{title}}</strong></div>
+        {{#if logged_in}}
+        <div class="p-1 lh-sm pt-0">{{description}}</div>
+        {{/if}}
+        <div class="p-1 lh-sm">Starts<br />{{getFormattedStamp start_date timezone "dateTime" true}}</div>
+        <div class="p-1 lh-sm">Finishes<br />{{getFormattedStamp end_date timezone "dateTime" true}}</div>
     </div>
 </a>
