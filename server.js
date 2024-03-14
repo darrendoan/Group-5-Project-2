@@ -10,16 +10,18 @@ const authConfig = require('./config/auth');
 
 //  View
 const exphbs = require('express-handlebars');
+// Helpers
+const hbHelpers = require('./utils/handlebars/helpers');
 //  Model
 const sequelize = require('./config/connection');
 
 // Environment definition
 const app = express();
 const PORT = process.env.PORT || 3001; // Set the port for the server
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers: hbHelpers });
 
 // Register partials from Handlebars
-const hbPartials = require('./utils/registerPartials');
+const hbPartials = require('./utils/handlebars/partials');
 hbPartials();
 
 // Init Auth0

@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const events = eventData.map((event) => event.get({ plain: true }));
+    console.log(events);
 
     res.render('home', {
       events,

@@ -1,19 +1,13 @@
 <section class="flex-grow-1">
-    {{!-- Featured events --}}
-    <div>
-        {{#if featured}}
-            {{#each featured as |feature|}}
-            {{> featured-event}}
-            {{/each}}
-        {{else}}
-            <span>No upcoming events found</span>
-        {{/if}}
-    </div>
-</section>
-<section class="flex-grow-1">
     {{!-- Upcoming events--}}
     <div>
-
+        {{#if events}}
+            {{#each events as |event|}}
+            {{> event-tile}}
+            {{/each}}
+        {{else}}
+        No events found
+        {{/if}}
     </div>
     {{!-- User profile/quick actions --}}
     {{#if logged_in}}
