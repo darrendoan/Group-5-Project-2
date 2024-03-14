@@ -6,33 +6,43 @@ const User = require('./user');
 const EventParticipant = require('./eventParticipant');
 
 /*  Relation Event - Status*/
-Event.hasMany(Status, {
+Event.belongsTo(Status, {
   foreignKey: 'status_id',
   onDelete: 'CASCADE'
 });
 
-Status.belongsTo(Event, {
+Status.hasMany(Event, {
   foreignKey: 'status_id'
 });
 
 /*  Relation Event - Game*/
-Event.hasMany(Game, {
+Event.belongsTo(Game, {
   foreignKey: 'game_id',
   onDelete: 'CASCADE'
 });
 
-Game.belongsTo(Event, {
+Game.hasMany(Event, {
   foreignKey: 'game_id'
 });
 
 /*  Relation Event - Platform*/
-Event.hasMany(Platform, {
+Event.belongsTo(Platform, {
   foreignKey: 'platform_id',
   onDelete: 'CASCADE'
 });
 
-Platform.belongsTo(Event, {
+Platform.hasMany(Event, {
   foreignKey: 'platform_id'
+});
+
+Event.belongsTo(User, {
+  foreignKey: 'organizer_id',
+  as: 'organiser'
+});
+
+User.hasMany(Event, {
+  foreignKey: 'organizer_id',
+  as: 'organiser_for'
 });
 
 /*  Relation Event - User*/
@@ -44,7 +54,7 @@ Event.belongsToMany(User, {
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'event_users'
+  as: 'events'
 });
 
 // User belongToMany Event (through EventParticipant)
@@ -55,7 +65,7 @@ User.belongsToMany(Event, {
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'user_events'
+  as: 'participants'
 });
 
 module.exports = { Event, Status, Game, Platform, User, EventParticipant };

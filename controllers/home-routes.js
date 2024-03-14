@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Event } = require('../models');
+const { Event, User, Platform, Game, Status } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -20,7 +20,30 @@ router.get('/', async (req, res) => {
 
 router.get('/event/:id', async (req, res) => {
   try {
-    const eventData = await Event.findByPk(req.params.id);
+    const eventData = await Event.findByPk(req.params.id, {
+      include: [
+        {
+          model: Status,
+          as: 'status',
+          attributes: ['status_name']
+        },
+        {
+          model: User,
+          as: 'organiser',
+          attributes: ['name']
+        },
+        {
+          model: Game,
+          as: 'game',
+          attributes: ['game_name']
+        },
+        {
+          model: Platform,
+          as: 'platform',
+          attributes: ['platform_name']
+        }
+      ]
+    });
 
     const event = eventData.get({ plain: true });
 
@@ -29,6 +52,7 @@ router.get('/event/:id', async (req, res) => {
       logged_in: req.oidc.isAuthenticated(), // oidc helper that returns a bool if logged in
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

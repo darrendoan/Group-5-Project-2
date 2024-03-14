@@ -21,8 +21,9 @@ const setting = {
     },
     MASK: {
         FULL: 'dddd Do MMMM YYYY, hh:mm A',
+        DATE_TIME: 'DD/MM/YYYY hh:mm A',
         DATE: 'DD/MM/YYYY',
-        TIME: 'hh:mm A'
+        TIME: 'hh:mm A',
     },
     UNIT: {
         DAY: 'DD',
@@ -31,7 +32,8 @@ const setting = {
         HOUR24: 'HH',
         HOUR12: 'hh',
         MINUTE: 'mm',
-        MERIDIEM: 'A'
+        MERIDIEM: 'A',
+        OFFSET: '(Z)'
     }
 }
 
@@ -55,6 +57,7 @@ function getTime(timestamp, offset) {
         formatted: {
             date: tz.format(setting.MASK.DATE),
             time: tz.format(setting.MASK.TIME),
+            dateTime: tz.format(setting.MASK.DATE_TIME),
             full: tz.format(setting.MASK.FULL)
         },
         unit: {
@@ -64,7 +67,8 @@ function getTime(timestamp, offset) {
             hour24: tz.format(setting.UNIT.HOUR24),
             hour12: tz.format(setting.UNIT.HOUR12),
             minute: tz.format(setting.UNIT.MINUTE),
-            meridiem: tz.format(setting.UNIT.MERIDIEM)
+            meridiem: tz.format(setting.UNIT.MERIDIEM),
+            offset: tz.format(setting.UNIT.OFFSET)
         }
     }
 }

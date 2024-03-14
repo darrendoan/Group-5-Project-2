@@ -1,5 +1,18 @@
-{{#if logged_in}}
-<h1>YAY</h1>
-{{else}}
-<h1>BOO</h1>
-{{/if}}
+<section class="flex-grow-1 ms-2 me-2">
+    <h2>Featured Events</h2>
+    <hr />
+    {{!-- Upcoming events--}}
+    <div class="d-flex justify-content-evenly">
+        {{#if events}}
+            {{#each events as |event|}}
+            {{!-- 
+                We need to manually pass these into the partial so we can include the logged_in attribute
+                otherwise it's out of scope and auth-related checks can't occur
+            --}}
+            {{> event-tile event=event logged_in=../logged_in}}
+            {{/each}}
+        {{else}}
+        No events found
+        {{/if}}
+    </div>
+</section>
